@@ -15,4 +15,4 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 vim.opt.fillchars = "vert:▏"
-
+vim.opt.showmode = false
