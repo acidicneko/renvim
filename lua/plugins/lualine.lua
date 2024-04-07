@@ -4,6 +4,6 @@ local opts = {
         component_separators = "",
         section_separators = "",
     },
-},
+}
 
 return opts

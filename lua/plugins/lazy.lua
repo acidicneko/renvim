@@ -16,9 +16,11 @@ require("lazy").setup({
     {
         'nvimdev/dashboard-nvim',
         event = 'VimEnter',
-        config = function()
-            local config = require("plugins.dashboard"),
-            require('dashboard').setup(config)
+        opts = function()
+            return require("plugins.dashboard")
+        end,
+        config = function(_,opts)
+            require('dashboard').setup(opts)
         end,
         dependencies = { {'nvim-tree/nvim-web-devicons'}}
     },
@@ -46,7 +48,7 @@ require("lazy").setup({
             'nvim-tree/nvim-web-devicons',
         },
         opts = function()
-            return require("plugins.nvim-tree")
+            return require("plugins.lualine")
         end,
     },
 
