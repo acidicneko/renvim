@@ -31,9 +31,11 @@ require("lazy").setup({
         dependencies = {
             "nvim-tree/nvim-web-devicons",
         },
-        config = function()
-            local config = require("plugins.nvim-tree"),
-            require("nvim-tree").setup(config) 
+        opts = function()
+            return require("plugins.nvim-tree")
+        end,
+        config = function(_,opts)
+            require("nvim-tree").setup(opts) 
         end,
     },
     
